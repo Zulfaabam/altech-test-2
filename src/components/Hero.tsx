@@ -2,11 +2,18 @@ import Navbar from "./Navbar";
 import blobTop from "../assets/blob-haikei.svg";
 import blobBottom from "../assets/layered-waves-haikei.svg";
 import metrics from "../assets/metrics.svg";
+import LoginModal from "./Login";
+import { useState } from "react";
 
 const Hero = () => {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  const openLoginModal = () => setIsLoginOpen(true);
+  const closeLoginModal = () => setIsLoginOpen(false);
+
   return (
     <div className="h-screen relative overflow-hidden flex items-center justify-center text-center">
-      <Navbar />
+      <Navbar openLogin={openLoginModal} />
       <div className="space-y-8 flex flex-col justify-center items-center">
         <h1 className="font-bold text-5xl">
           Welcome to Our Startup's ERP Solution
@@ -37,6 +44,7 @@ const Hero = () => {
         alt="blob-bottom"
         className="absolute -bottom-20 -right-[365px] -rotate-[27deg] w-[1200px]"
       />
+      {isLoginOpen && <LoginModal closeModal={closeLoginModal} />}
     </div>
   );
 };

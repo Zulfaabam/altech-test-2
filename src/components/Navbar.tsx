@@ -1,6 +1,10 @@
 import logo from "../assets/react.svg";
 
-const Navbar = () => {
+interface TNavbarProps {
+  openLogin: () => void;
+}
+
+const Navbar = ({ openLogin }: TNavbarProps) => {
   const menu = ["about", "pricing", "contact"];
 
   return (
@@ -15,7 +19,10 @@ const Navbar = () => {
             {m}
           </a>
         ))}
-        <button className="border border-blue-400 w-32 py-1 rounded-lg text-blue-400 uppercase font-medium">
+        <button
+          className="border border-blue-400 w-32 py-1 rounded-lg text-blue-400 uppercase font-medium"
+          onClick={openLogin}
+        >
           Login
         </button>
       </div>
