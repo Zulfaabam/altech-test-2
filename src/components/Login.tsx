@@ -9,7 +9,6 @@ const LoginModal = ({ closeModal }: LoginModalProps) => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // Handle login logic here
     closeModal();
   };
 

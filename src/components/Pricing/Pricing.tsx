@@ -1,3 +1,5 @@
+import PricingCard from "./PricingCard";
+
 const Pricing = () => {
   const tiers = [
     {
@@ -47,23 +49,7 @@ const Pricing = () => {
       </p>
       <div className="tiers flex flex-wrap justify-center">
         {tiers.map((tier) => (
-          <div
-            key={tier.id}
-            className="tier bg-white shadow-lg rounded-lg p-6 m-4 max-w-sm w-full hover:-translate-y-2 transition-all"
-          >
-            <h3 className="text-xl font-semibold mb-4">{tier.name}</h3>
-            <p className="text-2xl font-bold mb-4 text-[#6C63FF]">
-              ${tier.price}
-              <span className="text-base font-normal">/month</span>
-            </p>
-            <ul className="list-disc list-inside text-left">
-              {tier.features.map((feature, index) => (
-                <li key={index} className="mb-2">
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <PricingCard key={tier.id} tier={tier} />
         ))}
       </div>
     </div>
