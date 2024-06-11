@@ -37,7 +37,7 @@ const Pricing = () => {
   ];
 
   return (
-    <div id="pricing" className="py-12 bg-gray-100">
+    <div id="pricing" className="py-12 bg-gray-100 px-4">
       <h2 className="text-3xl font-bold text-center mb-3 underline underline-offset-4 decoration-[#56b6f4]">
         Pricing
       </h2>

@@ -1,11 +1,11 @@
 const Contact = () => {
   return (
-    <div id="contact" className="py-12 bg-circle-scatter bg-cover">
+    <div id="contact" className="py-12 bg-circle-scatter md:bg-cover px-4">
       <h2 className="text-3xl font-bold text-center mb-8 underline underline-offset-4 decoration-[#56b6f4]">
         Contact Us
       </h2>
       <div className="container mx-auto flex flex-col items-center">
-        <p className="text-lg mb-4 font-medium">
+        <p className="text-lg mb-4 font-medium text-center">
           Have questions or need support? Get in touch with us!
         </p>
         <div className="contact-details w-full max-w-md bg-gray-100 p-6 rounded-lg shadow-lg">
