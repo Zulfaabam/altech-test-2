@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "blob-scene": "url(src/assets/blob-scene-haikei.svg)",
+        "circle-scatter": "url(src/assets/circle-scatter-haikei.svg)",
       },
     },
   },

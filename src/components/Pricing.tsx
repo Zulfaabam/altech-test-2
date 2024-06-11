@@ -38,8 +38,10 @@ const Pricing = () => {
 
   return (
     <div id="pricing" className="py-12 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-2">Pricing</h2>
-      <p className="text-center mb-4 max-w-lg mx-auto">
+      <h2 className="text-3xl font-bold text-center mb-3 underline underline-offset-4 decoration-[#56b6f4]">
+        Pricing
+      </h2>
+      <p className="text-center mb-4 max-w-lg mx-auto font-medium">
         We provide a flexible TIER System where customers can purchase our
         product by category/level. Here’s what each tier offers:
       </p>
@@ -47,10 +49,10 @@ const Pricing = () => {
         {tiers.map((tier) => (
           <div
             key={tier.id}
-            className="tier bg-white shadow-lg rounded-lg p-6 m-4 max-w-sm w-full"
+            className="tier bg-white shadow-lg rounded-lg p-6 m-4 max-w-sm w-full hover:-translate-y-2 transition-all"
           >
             <h3 className="text-xl font-semibold mb-4">{tier.name}</h3>
-            <p className="text-2xl font-bold mb-4">
+            <p className="text-2xl font-bold mb-4 text-[#6C63FF]">
               ${tier.price}
               <span className="text-base font-normal">/month</span>
             </p>
